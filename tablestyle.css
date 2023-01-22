@@ -1,0 +1,107 @@
+body {
+
+    background: #FFF;
+    /* background: -webkit-linear-gradient(45deg,#4158d028,#c850c028);
+    background: -o-linear-gradient(45deg,#4158d028,#c850c028);
+    background: -moz-linear-gradient(45deg,#4158d028,#c850c028);
+    background: linear-gradient(45deg,#4158d028,#c850c028); */
+
+}
+
+thead {
+    color: #fff;
+    background: #36304a;
+    margin-right: -15px;
+    margin-left: -15px;
+    font-family: Open Sans !important;
+    font-size: 16px !important;
+    color: #fff !important;
+    line-height: 1.2 !important;
+    font-weight: 100 !important;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+}
+.dt-buttons{
+
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+tbody tr {
+    font-family: Open Sans !important;
+    font-size: 15px !important;
+    color: gray !important;
+    line-height: 1.2 !important;
+    font-weight: 100 !important;
+}
+
+
+
+table.dataTable thead th, table.dataTable tfoot th {
+    font-weight: 100 !important;
+}
+
+.left-col {
+    float: left;
+    width: 60%;
+
+}
+ 
+.ml-max {
+    position: absolute;
+    right: 40%;
+}
+.right-col {
+    float: left;
+    width: 40%;
+}
+
+.btn {
+    font-family: "Google Sans",Roboto,var(--noto-ff),Arial,sans-serif !important;
+    font-size: 0.875rem !important;
+    font-weight: 500 !important;
+    letter-spacing: 0 !important;
+    line-height: 1.25rem !important;
+    color: #fff !important;
+    
+}
+.btn.fa::before{
+    font-family: "Google Sans",Roboto,var(--noto-ff),Arial,sans-serif !important;
+    font-size: 0.875rem !important;
+    font-weight: 500 !important;
+    letter-spacing: 0 !important;
+    line-height: 1.25rem !important;
+    color: #fff !important;
+}
+
+#buttons {
+    
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    padding: 10px;
+    z-index: 400;
+  }
+  .rounded-extra{
+    border-radius: 12px !important;
+  }
+  .shadow-custom {
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.20)!important;
+    background-color: #36304a!important;
+    /* box-shadow: 3px 3px #888888 !important; */
+    
+}
+/* 
+#myTable_filter {
+    background-color: #36304a!important;
+    color: #FFF;
+    padding: 2px;
+    padding-right: 4px;
+    padding-left: 8px;
+    border-radius: 6px;
+}
+
+#myTable_filter >label > input {
+    border-radius: 6px;
+} */

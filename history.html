@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="historystyle.css">
+    <link rel="stylesheet" href="tablestyle.css">
+    <link rel="stylesheet" href="footer.css">
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+        integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Vehicle History</title>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+    <div class="mx-auto d-flex flex-row" style="width: 75%;">
+        <div id="map" class="my-2 mx-2" style="width: 60%;">
+        </div>
+
+        <table class="table table-hover " style="width: 40%;">
+
+            <tbody id="vehicle_info_tbody">
+                <tr>
+                    <th scope="row">Vehicle Number</th>
+                    <td id="vehical">...</td>
+                </tr>
+                <tr>
+                    <th scope="row">Highway Number</th>
+                    <td id="highway">...</td>
+                </tr>
+                <tr>
+                    <th scope="row">Phone</th>
+                    <td id="phone">...</td>
+                </tr>
+                <tr>
+                    <th scope="row">Police Incharge Name</th>
+                    <td id="incharge">...</td>
+                </tr>
+                <tr>
+                    <th scope="row">Sector Number</th>
+                    <td id="sector">...</td>
+                </tr>
+                <tr>
+                    <th scope="row">Last active Time</th>
+                    <td id="time">...</td>
+                </tr>
+                <tr>
+                    <th scope="row">Zone</th>
+                    <td id="zone">...</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="w-75 mx-auto">
+        <table id="myTable" class="hover row-border stripe">
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Lat</th>
+                    <th>Lng</th>
+                    <th>View on Map</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+    <div class="abc footer container text-center mt-auto">
+        <span class="text-black"> <i>Developed by</i></span>
+        <span class="text-primary">Escalate.</span>
+        <div class="abctext mb-4 mx-auto ">
+            <div class="d-flex flex-row align-items-center my-2 mx-4 ">
+                <img width="25" class="rounded-circle"
+                    src="https://media.licdn.com/dms/image/C5603AQGLuvenbOvnrQ/profile-displayphoto-shrink_400_400/0/1628842051196?e=1680134400&amp;v=beta&amp;t=CvJEl8NiPCyxIxIpknTvbfqmUPmoR_CBEBs2cqIyQq8"
+                    height="25" alt="Aman Kuntal">
+                <p class="no-wrap mb-0">&nbsp;&nbsp;&nbsp;&nbsp;Aman Kuntal&nbsp;&nbsp;</p>
+                <a href="https://www.linkedin.com/in/aman-kuntal-5b6968114" target="_blank"
+                    style="margin-left: auto; margin-right: 2px;"><i class="fa fa-linkedin"></i></a>
+            </div>
+            <div class="d-flex flex-row align-items-center my-2 mx-4">
+                <img width="25" class="rounded-circle"
+                    src="https://media.licdn.com/dms/image/C5103AQF0koPrPmJQnA/profile-displayphoto-shrink_400_400/0/1578821959545?e=1680134400&v=beta&t=v_EMxqJzZYuro8ORGSsNwfQlzHTfcLcz-FxtTOGbTyc"
+                    height="25" alt="Aman Kuntal">
+                <p class="no-wrap mb-0">&nbsp;&nbsp;&nbsp;&nbsp;Navdeep Dagur&nbsp;&nbsp;</p>
+                <a href="https://www.linkedin.com/in/navdeep-dagur-b94712194" target="_blank"
+                    style="margin-left: auto; margin-right: 2px;"><i class="fa fa-linkedin"></i></a>
+            </div>
+            <div class="d-flex flex-row align-items-center my-2 mx-4">
+                <img width="25" class="rounded-circle"
+                    src="https://media.licdn.com/dms/image/C4D03AQFmen0OKUix-w/profile-displayphoto-shrink_400_400/0/1656880754616?e=1680134400&v=beta&t=wjE3zmUq3h6uJQT8kacIA_rQYQORBf1ByVMv7Vj-3lo"
+                    height="25" alt="Aman Kuntal">
+                <p class="no-wrap mb-0">&nbsp;&nbsp;&nbsp;&nbsp;Wasim Memon&nbsp;&nbsp;</p>
+                <a href="https://www.linkedin.com/mwlite/in/wasim-memon-4349a11a7" target="_blank"
+                    style="margin-left: auto; margin-right: 2px;"><i class="fa fa-linkedin"></i></a>
+            </div>
+            <div class="d-flex flex-row align-items-center my-2 mx-4">
+                <img width="25" class="rounded-circle"
+                    src="https://media.licdn.com/dms/image/C5603AQFmU6k_vqBedg/profile-displayphoto-shrink_400_400/0/1622966734157?e=1680134400&v=beta&t=y2gKDLYtmh1YA2UAERwZOc3mMrbt7mzdHfU08IB8eak"
+                    height="25" alt="Aman Kuntal">
+                <p class="no-wrap mb-0">&nbsp;&nbsp;&nbsp;&nbsp;Sandeep Mishra&nbsp;&nbsp;</p>
+                <a href="https://www.linkedin.com/in/sandeep03edu/" target="_blank"
+                    style="margin-left: auto; margin-right: 2px;"><i class="fa fa-linkedin"></i></a>
+            </div>
+            <div class="d-flex flex-row align-items-center my-2 mx-4">
+                <img width="25" class="rounded-circle"
+                    src="https://media.licdn.com/dms/image/C4D03AQGSkFA2wKRJAw/profile-displayphoto-shrink_400_400/0/1663075303142?e=1680134400&v=beta&t=_Gu3dX3mFIbCguLRu0QQpn2cHkXNEy_kxWj-2U3xgVE"
+                    height="25" alt="Aman Kuntal">
+                <p class="no-wrap mb-0">&nbsp;&nbsp;&nbsp;&nbsp;Osho Jain&nbsp;&nbsp;</p>
+                <a href="https://www.linkedin.com/in/osho-jain-1a9260a4/" target="_blank"
+                    style="margin-left: auto; margin-right: 2px;"><i class="fa fa-linkedin"></i></a>
+            </div>
+            <div class="d-flex flex-row align-items-center my-2 mx-4">
+                <img width="25" class="rounded-circle"
+                    src="https://media.licdn.com/dms/image/C5603AQH7s8-fwALb8w/profile-displayphoto-shrink_400_400/0/1581088360664?e=1680134400&v=beta&t=1yfwLotSHImWBL_Fh_A2nNCI1WS1lLelV6l5efaw9NY"
+                    height="25" alt="Aman Kuntal">
+                <p class="no-wrap mb-0">&nbsp;&nbsp;&nbsp;&nbsp;Jeet Shah&nbsp;&nbsp;</p>
+                <a href="https://www.linkedin.com/in/jeet-shah-29732183/" target="_blank"
+                    style="margin-left: auto; margin-right: 2px;"><i class="fa fa-linkedin"></i></a>
+            </div>
+            <div>
+                <p class="no-wrap mb-0 lh-1">PROJECT MENTOR IPS Rahul Gupta</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function preloadFunc() {
+            if (localStorage.getItem("canaccess") === null) {
+                let person = prompt("Please enter Password", "");
+                if (person != null) {
+                    if (person !== 'pass') {
+                        alert("WRONG PASSWORD");
+                        window.open("https://www.google.com", "_self");
+                    } else {
+                        localStorage.setItem("canaccess", "true");
+                    }
+                }
+            }
+        }
+        window.onpaint = preloadFunc();
+    </script>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+        integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    <script type="module" src="historymodule.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/plug-ins/1.13.1/dataRender/datetime.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.2.2/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.print.min.js"></script>
+</body>
+
+</html>

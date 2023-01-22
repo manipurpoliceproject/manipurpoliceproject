@@ -1,0 +1,122 @@
+.btn {
+    font-family: "Google Sans",Roboto,var(--noto-ff),Arial,sans-serif !important;
+    font-size: 0.875rem !important;
+    font-weight: 500 !important;
+    letter-spacing: 0 !important;
+    line-height: 1.25rem !important;
+    
+}
+.btn.fa::before{
+    font-family: "Google Sans",Roboto,var(--noto-ff),Arial,sans-serif !important;
+    font-size: 0.875rem !important;
+    font-weight: 500 !important;
+    letter-spacing: 0 !important;
+    line-height: 1.25rem !important;
+}
+
+.pointerclass {
+  cursor:pointer;
+}
+
+li {
+  cursor:pointer;
+}
+#searchlist > *{
+  margin-left: 10px;
+  margin-right: 10px;
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-size: 0.75rem;
+    line-height: 1.4;
+
+}
+#searchlist > div > hr {
+  margin: 2px 2px 2px 2px;
+}
+html, body, #map{
+    width:100%;
+    height:100vh;
+    margin: 0;
+    padding: 0;
+  }
+.shadow-custom {
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.20)!important;
+    background-color: #FFFFFF!important;
+    /* box-shadow: 3px 3px #888888 !important; */
+    
+}
+#buttons {
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    padding: 10px;
+    z-index: 400;
+  }
+#searchbox {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding: 10px;
+    z-index: 400;
+  }
+
+  #searchbox > * {
+        outline: none;
+  }
+
+
+  .rounded-extra{
+    border-radius: 24px !important;
+  }
+
+  #sidebar.active {
+    left: 0px;
+    top: 0px
+  }
+
+  #sidebar {
+    position: fixed;
+    width: 250px;
+    height: 100vh;
+    padding-top: -10px;
+    background-color: rgb(255, 255, 255);
+    left: -250px;
+  }
+  
+  #sidebar .toggle-btn {
+    position: absolute;
+    left: 270px;
+    top: 20px;
+    cursor: pointer;
+  }
+  
+  #sidebar .toggle-btn span {
+    display: block;
+    width: 30px;
+    height: 5px;
+    background: #000;
+    margin-bottom: 5px;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.20)!important;
+    z-index: 1000;
+  }
+  
+  #sidebar.active { /* REMOVE THE SPACE ON THIS LINE */
+    left: 0px;
+  }
+  
+  ul {
+    width: 100%;
+    margin-top: 30px;
+  }
+  
+  li {
+    list-style: none;
+    padding: 2px 5px 5px 2px;
+    
+    text-align: left;
+  }
+  .close_side_bar{
+    margin-top: 10px;
+    font-size: larger !important;
+  }
+
+  
