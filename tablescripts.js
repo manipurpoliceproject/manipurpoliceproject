@@ -59,7 +59,8 @@ get(child(dbRef, `User`)).then((snapshot) => {
                 }, {
                     targets: 0,
                     render: function (data) {
-                        return data.toUpperCase();
+                        return '<a href="history.html?vehicle=' + data + ' ">' + data.toUpperCase() + '</a>';
+                        // return '<a href="history.html?vehicle=' + data + ' >' + data.toUpperCase() + ' </a > ';
                     }
                 }]
             });
