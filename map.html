@@ -15,20 +15,20 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
-    <title>Manipur Police</title>
+    <title>Highway Watch</title>
 </head>
 
 <body>
 
-    <div id="map"></div>
+    <div id="map" style="z-index: 50;"></div>
 
-    <div id="searchbox" class="d-flex flex-row ">
+    <div id="searchbox" class="d-flex flex-row " style="z-index: 100;">
         <div class="d-flex flex-column me-4 ">
             <div class="d-flex p-1 flex-row form-group rounded mr-1 shadow-custom">
                 <div id="sidebar">
                     <div class="d-flex flex align-items-center">
-                        <img src="assets/Manipur_Police_Logo_(India).svg.png" height="50px" class="ms-4 me-2 mt-3">
-                        <p class="mb-0 h4 lh-1 mt-3">Manipur Police</p>
+                        <img src="assets/logo.png" height="50px" class="ms-3 me-1 mt-3">
+                        <p class="mb-0 h5 lh-sm mt-3" style="white-space:nowrap;">Highway Watch</p>
                         <div style="margin-left: auto;">
                             <button class="btn close_side_bar me-3" onclick="toggleSideBarclose()"><i
                                     class="fa fa-times"> </i></button>
@@ -39,16 +39,16 @@
                     <ul>
                         <li id="sidepanelhighway2" onclick="toggleSideBarclose()" style="color: #717579;"><i
                                 class="fa fa-road"> </i> &nbsp;
-                            National HIghway 2
+                            National Highway 2
                         </li>
                         <li id="sidepanelhighway3" onclick="toggleSideBarclose()" style="color: #717579;"><i
                                 class="fa fa-road"> </i> &nbsp;
-                            National HIghway 37
+                            National Highway 37
                         </li>
 
                         <li id="sidepanelhighway1" onclick="toggleSideBarclose()" style="color: #717579;"><i
                                 class="fa fa-road"> </i> &nbsp;
-                            National HIghway 102
+                            National Highway 102
                         </li>
                         <li onclick="opentable()" style="color: #717579;"><i class="fa fa-table"> </i> &nbsp; All
                             vehicles Database</li>
@@ -88,6 +88,17 @@
             onclick="opentable()"><i class="fa fa-table"> </i> Database</button>
 
 
+
+    </div>
+    <div id="logos" class="d-flex flex-column" style="position: absolute;right: 10px; z-index: 75;">
+
+        <button id="button" type="button"
+            class="btn btn-light mx-sm-1 mt-2 mb-2 circle-button shadow-custom align-self-start"
+            style="margin-left: auto !important;"><img src="assets/logo.png" height="40px" width="40px"></button>
+        <button id="button bright" type="button"
+            class="bright btn btn-light mx-sm-1 mt-2  mb-2 circle-button shadow-custom align-self-start"
+            style="margin-left: auto !important;"><img src="assets/Manipur_Police_Logo_(India).svg.png"
+                height="40px"></button>
 
     </div>
     <div class="abc footer fixed-bottom container text-center mx-auto">
@@ -143,7 +154,10 @@
                     style="margin-left: auto; margin-right: 2px;"><i class="fa fa-linkedin"></i></a>
             </div>
             <div>
-                <p class="no-wrap mb-0 lh-1 mb-2">Project Mentor IPS Rahul Gupta</p>
+                <p class="no-wrap mb-0 lh-1 mb-2">Project conceptualised by : Shri Nishit Kumar Ujjwal , IPS</p>
+            </div>
+            <div>
+                <p class="no-wrap mb-0 lh-1 mb-2">Project mentor : Shri Rahul Gupta, IPS</p>
             </div>
         </div>
     </div>

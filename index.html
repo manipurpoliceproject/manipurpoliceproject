@@ -10,6 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Home</title>
 </head>
 
 <body class="text-align:center !important;">
@@ -19,8 +20,8 @@
             <div class="d-flex p-1 flex-row form-group rounded mr-1 shadow-custom">
                 <div id="sidebar">
                     <div class="d-flex flex align-items-center">
-                        <img src="assets/Manipur_Police_Logo_(India).svg.png" height="50px" class="ms-4 me-2 mt-3">
-                        <p class="mb-0 h4 lh-1 mt-3">Manipur Police</p>
+                        <img src="assets/logo.png" height="50px" class="ms-4 me-2 mt-3">
+                        <p class="mb-0 h4 lh-1 mt-3">Highway Watch</p>
                         <div style="margin-left: auto;">
                             <button class="btn close_side_bar me-3" onclick="toggleSideBarclose()"><i
                                     class="fa fa-times"> </i></button>
@@ -31,15 +32,15 @@
                     <ul>
                         <li id="sidepanelhighway2" onclick="toggleSideBarclose()" style="color: #717579;"><i
                                 class="fa fa-road"> </i> &nbsp;
-                            National HIghway 2
+                            National Highway 2
                         </li>
                         <li id="sidepanelhighway3" onclick="toggleSideBarclose()" style="color: #717579;"><i
                                 class="fa fa-road"> </i> &nbsp;
-                            National HIghway 37
+                            National Highway 37
                         </li>
 
                         <li id="sidepanelhighway1" onclick="toggleSideBarclose()" style="color: #717579;"><i
-                                class="fa fa-road"> </i> &nbsp; National HIghway 102
+                                class="fa fa-road"> </i> &nbsp; National Highway 102
                         </li>
                         <li onclick="opentable()" style="color: #717579;"><i class="fa fa-table"> </i> &nbsp; All
                             vehicles Database</li>
@@ -79,9 +80,24 @@
             onclick="opentable()"><i class="fa fa-table"> </i> Database</button>
 
     </div>
+    <div id="logos" class="d-flex flex-column" style="position: absolute;right: 10px; z-index: -100;">
+
+        <button id="button" type="button"
+            class="btn btn-light mx-sm-1 mt-2 mb-2 circle-button shadow-custom align-self-start"
+            style="margin-left: auto !important;"><img src="assets/logo.png" height="40px" width="40px"></button>
+        <button id="button bright" type="button"
+            class="bright btn btn-light mx-sm-1 mt-2  mb-2 circle-button shadow-custom align-self-start"
+            style="margin-left: auto !important;"><img src="assets/Manipur_Police_Logo_(India).svg.png"
+                height="40px"></button>
+
+    </div>
 
     <div class="slideshow-container">
-
+        <div class="mySlides">
+            <!-- <div class="numbertext">1 / 3</div> -->
+            <img src="assets/logo.png" style="padding: 25%">
+            <div class="text h2">Highway Watch</div>
+        </div>
         <div class="mySlides">
             <!-- <div class="numbertext">1 / 3</div> -->
             <img src="assets/Manipur -01.svg">
@@ -162,7 +178,10 @@
                     style="margin-left: auto; margin-right: 2px;"><i class="fa fa-linkedin"></i></a>
             </div>
             <div>
-                <p class="no-wrap mb-0 lh-1 mb-2">Project Mentor IPS Rahul Gupta</p>
+                <p class="no-wrap mb-0 lh-1 mb-2">Project conceptualised by : Shri Nishit Kumar Ujjwal , IPS</p>
+            </div>
+            <div>
+                <p class="no-wrap mb-0 lh-1 mb-2">Project mentor : Shri Rahul Gupta, IPS</p>
             </div>
         </div>
     </div>
@@ -208,7 +227,7 @@
                 dots[i].className = dots[i].className.replace(" active", "");
             }
             slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
+            // dots[slideIndex - 1].className += " active";
             setTimeout(showSlides, 5000); // Change image every 3 seconds
         }
     </script>

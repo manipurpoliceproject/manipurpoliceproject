@@ -37,7 +37,7 @@ html,
             font-size: 15px;
             padding: 8px 12px;
             position: absolute;
-            bottom: 8px;
+            bottom: -40px !important;
             width: 100%;
             text-align: center;
         }
@@ -137,11 +137,24 @@ html, body, #map{
   #searchbox > * {
         outline: none;
   }
+#logos {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding: 10px;
+    z-index: 400;
+  }
 
+  #logos > * {
+        outline: none;
+  }
 
   .rounded-extra{
     border-radius: 24px !important;
   }
+  .circle-button{
+  border-radius: 40px !important;
+}
 
   #sidebar.active {
     left: 0px;

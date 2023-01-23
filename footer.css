@@ -21,7 +21,7 @@
 
     .abc .abctext {
         visibility: hidden !important;
-        width: 360px !important;
+        width: 440px !important;
         background-color: rgb(255, 255, 255) !important;
         color: rgb(0, 0, 0) !important;
         text-align: center !important;
@@ -33,9 +33,9 @@
         /* Position the abc */
         position: relative !important;
         z-index: 1 !important;
-        top: -260px;
+        top: -290px;
         left: 50% !important;
-        margin-left: -180px !important;
+        margin-left: -220px !important;
     }
 
     .abc:hover .abctext {
