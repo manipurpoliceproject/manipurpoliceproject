@@ -118,9 +118,9 @@ onValue(usersLocation, (snapshot) => {
 var markersonchart = []
 var cities = L.layerGroup(markersonchart);
 var showall = true
-$('#sidepanelhighway1').click(function () { showonly('NH-102'); });
-$('#sidepanelhighway2').click(function () { showonly('NH-2'); });
-$('#sidepanelhighway3').click(function () { showonly('NH-37'); });
+$('#sidepanelhighway1').click(function () { showonly('nh-102'); });
+$('#sidepanelhighway2').click(function () { showonly('nh-2'); });
+$('#sidepanelhighway3').click(function () { showonly('nh-37'); });
 
 $('#ShowAll').click(function () { showall = true; updateLocation(); });
 
